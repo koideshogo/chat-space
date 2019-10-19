@@ -10,7 +10,7 @@
 
 ### Association
 - has_many :posts
-- has_many :groups
+- has_many :groups, through: :users_groups
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -21,7 +21,7 @@
 |group_create_user_name|string|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
+- has_many :users, through: users_groups
 - has_many :posts
 
 ## users_groupsテーブル
@@ -44,8 +44,8 @@
 |user_name|string|foreign_key :true|
  
  ### Association
- -belongs_to :user
- -belongs_to :group
+ - belongs_to :user
+ - belongs_to :group
 
 
 
