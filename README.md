@@ -3,45 +3,45 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|unique: true, null:false|
+|user|integer|unique: true, null:false|
 |email|string|unique: true, null:false|
 |password|string|null: false|
-|user_name|string|unique: true, null:false|
+|name|string|unique: true, null: false, index: true|
 
 ### Association
 - has_many :posts
 - has_many :groups, through: :users_groups
+- has_many :users_groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupid|integer|unique: true, null: false|
-|group_name|string|unique: true, null: false|
-|group_create_user_id|integer|null: false, foreign_key: true|
-|group_create_user_name|string|null: false, foreign_key: true|
+|group|integer|unique: true, null: false|
+|name|string|unique: true, null: false|
 
 ### Association
 - has_many :users, through: users_groups
 - has_many :posts
+- has_many :users_groups
 
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
+- 
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null :false|
-|group_id|integer|foreign_key :true|
-|user_id|integer|foreign_key :true|
+|text|text|
+|group|references|foreign_key :true, null: false|
+|user|references|foreign_key :true, null: false|
 |image|string|
-|user_name|string|foreign_key :true|
  
  ### Association
  - belongs_to :user
