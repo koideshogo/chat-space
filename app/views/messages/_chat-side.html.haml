@@ -1,0 +1,17 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name testuser
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          =link_to"link_URL", class:"contents__btn--new-group" do
+            =fa_icon'edit', style:"color: white;"
+        %li.side-header__box__menu__edit-user
+          =link_to"link_URL", class: "contents__btn--edit-user" do
+            =fa_icon'cog', style:"color: white;"
+  .groups
+    .group
+      %p.group__group-name 
+        %a{href:'URL', style: "color: white;"} a
+      %p.group__latest-message
+        %a{href:'URL', style: "color: white;"} まだメッセージがありません
