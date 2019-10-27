@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
- 
-
-  get 'message' => 'message#index' 
+  root to: 'messages#index'
 end
