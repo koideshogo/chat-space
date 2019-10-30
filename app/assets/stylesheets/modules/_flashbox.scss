@@ -1,10 +1,13 @@
-.header{
-  color: white;
-  font-size: 1rem;
-  font-weight: lighter;
-  text-align: center;
-  width: 100vw;
-  &__logo{
+.notification {
+  .notice {
     background-color: $main_light_blue;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
   }
 }
