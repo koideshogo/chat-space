@@ -1,0 +1,2 @@
+class GropusController < ApplicationController
+end
