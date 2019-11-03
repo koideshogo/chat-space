@@ -10,12 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20191030130408) do
-
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-=======
 ActiveRecord::Schema.define(version: 20191029183646) do
 
   create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -36,13 +30,6 @@ ActiveRecord::Schema.define(version: 20191029183646) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
->>>>>>> 5763ff8d11bef2156c03668e65a1041049c041ca
-=======
-ActiveRecord::Schema.define(version: 20191028113529) do
-
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                                null: false
->>>>>>> Stashed changes
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -51,22 +38,10 @@ ActiveRecord::Schema.define(version: 20191028113529) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  end
-
-=======
-=======
->>>>>>> Stashed changes
     t.index ["name"], name: "index_users_on_name", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-<<<<<<< Updated upstream
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
->>>>>>> 5763ff8d11bef2156c03668e65a1041049c041ca
-=======
->>>>>>> Stashed changes
 end
