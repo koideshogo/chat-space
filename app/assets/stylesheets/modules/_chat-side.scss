@@ -21,6 +21,8 @@
               text-align: -webkit-match-parent;
               margin-left: 0.3rem;
               float: right;
+              font-size: 16px;
+              
             }
         }
       }
@@ -39,12 +41,14 @@
           font-size: 15px;
           margin-bottom: 5px;
           text-decoration: none;
+          color: white;
         }
         a{
           text-decoration: none;
         }
         &__message{
           font-size: 11px;
+          color: white;
         }
         a{
           text-decoration: none;
