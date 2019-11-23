@@ -41,9 +41,10 @@ $(function(){
       $('.messages').append(html);
       $('#message_content').val('');
       $('.form__submit').prop('disabled', false);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(){
-      alert('エラー')
+      alert('メッセージの送信に失敗しました')
     })
   })
 });
