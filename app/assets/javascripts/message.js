@@ -59,7 +59,6 @@ $(function() {
       })
 
       .done(function(messages) {
-        // console.table(messages)
         var insertHTML = '';
         messages.forEach(function (message) {
           console.log("message");
